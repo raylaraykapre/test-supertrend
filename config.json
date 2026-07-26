@@ -1,0 +1,45 @@
+{
+  "mode": "demo",
+  "api": {
+    "key": "0GrHpB7gej60xtlOqT",
+    "secret": "hHlZoAyZZEIokN0JXiLChpabrEU1YYkbhpDg",
+    "recv_window": 20000
+  },
+  "trade": {
+    "category": "linear",
+    "symbols": [
+      "BNBUSDT",
+      "SOLUSDT",
+      "ETHUSDT",
+      "ZECUSDT",
+      "XAUTUSDT"
+    ],
+    "quote_coin": "USDT",
+    "timeframe": "60",
+    "leverage_pct": 90,
+    "wallet_pct": 100,
+    "max_open_positions": 1,
+    "scan_seconds": 30
+  },
+  "strategy": {
+    "atr_period": 10,
+    "atr_multiplier": 3.0,
+    "tp_atr_multiplier": 3.0,
+    "sl_atr_multiplier": 1.0
+  },
+  "risk": {
+    "trailing_stop_enabled": true,
+    "trailing_activate_roi_pct": 50.0,
+    "trailing_callback_pct": 30.0
+  },
+  "demo": {
+    "starting_balance_php": 70000.0,
+    "reset_on_start": false,
+    "state_file": "demo_state.json"
+  },
+  "engine": {
+    "kline_limit": 200,
+    "scan_batch": 50,
+    "log_file": "autotrader.log"
+  }
+}
