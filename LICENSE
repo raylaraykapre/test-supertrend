@@ -1,0 +1,82 @@
+MIT License
+
+Copyright (c) 2024-2026 raylaraykapre (beaver)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+===========================================================================
+THIRD-PARTY STRATEGY ATTRIBUTION
+===========================================================================
+
+SuperTrend Indicator
+--------------------
+The SuperTrend indicator algorithm used in this software was originally
+conceived by Olivier Seban (French trader/author) and first described in
+his book "Tout le monde merite d'etre riche" (2008). The concept was later
+popularized on TradingView and is now a standard built-in indicator on
+virtually every charting platform (TradingView, MetaTrader, ThinkorSwim,
+Zerodha Kite, etc.).
+
+The specific implementation in this project (strategy.py) is an independent,
+clean-room reimplementation written from scratch in pure Python by the
+authors of this software. It is based solely on the publicly documented
+mathematical formula:
+
+    ATR = Average True Range (Wilder's smoothing) over N periods
+    Upper Band = HL2 - (Multiplier * ATR)
+    Lower Band = HL2 + (Multiplier * ATR)
+    Trend flips when price crosses the opposing band.
+
+Legal basis for unrestricted use:
+
+  1. Mathematical formulas and algorithms are NOT copyrightable.
+     - US: Baker v. Selden, 101 U.S. 99 (1879); Alice Corp v. CLS Bank (2014)
+     - EU: SAS Institute v. World Programming (C-406/10, CJEU 2012)
+     - Algorithms are excluded from copyright under the EU Software Directive.
+
+  2. The SuperTrend formula has NEVER been patented or trademarked by
+     Olivier Seban or any other party. No patent exists for this indicator
+     in any jurisdiction (verified via USPTO, EPO, WIPO searches).
+
+  3. The formula is publicly documented on hundreds of sources including
+     TradingView official documentation, Investopedia, and open-source
+     repositories on GitHub under permissive licenses (MIT, Apache, MPL-2.0).
+
+  4. This implementation does NOT copy any specific code expression from:
+     - KivancOzbilgic's TradingView Pine Scripts
+     - TradingView's built-in SuperTrend source
+     - Any commercial platform's proprietary implementation
+     - Any code licensed under restrictive terms
+
+  5. Only the underlying mathematical method (which is in the public domain)
+     was used as reference for this independent implementation.
+
+
+===========================================================================
+DISCLAIMER
+===========================================================================
+
+This software is provided for educational and personal use only. Trading
+cryptocurrency derivatives involves substantial risk of loss. The authors
+accept no responsibility for financial losses incurred through the use of
+this software. Past performance of any trading strategy does not guarantee
+future results.
+
+Use at your own risk.
